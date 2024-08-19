@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="profile.html" class="text-gray-700 hover:text-blue-500">Profile</a>
+      <a href="support.html" class="text-gray-700 hover:text-blue-500">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-12">
+    <h1 class="text-4xl font-bold text-gray-800 text-center mb-8">Donate to John Doe's Nominee</h1>
+
+    <!-- Donation Form -->
+    <section class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <form action="donation-confirmation.html" method="POST" class="space-y-6">
+        
+        <!-- Donation Amount Field -->
+        <div>
+          <label for="amount" class="block text-left text-gray-700 font-medium mb-2">Select Donation Amount</label>
+          <div class="grid grid-cols-3 gap-4">
+            <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-center hover:bg-blue-700 focus:outline-none">$10</button>
+            <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-center hover:bg-blue-700 focus:outline-none">$50</button>
+            <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-center hover:bg-blue-700 focus:outline-none">$100</button>
+          </div>
+          <div class="mt-4">
+            <label for="custom-amount" class="block text-left text-gray-700 font-medium mb-2">Or Enter a Custom Amount</label>
+            <input type="number" id="custom-amount" name="custom-amount" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Enter amount" required>
+          </div>
+        </div>
+
+        <!-- Payment Information -->
+        <div>
+          <label for="card-details" class="block text-left text-gray-700 font-medium mb-2">Payment Details</label>
+          <input type="text" id="card-details" name="card-details" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Card Number" required>
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <input type="text" id="expiry-date" name="expiry-date" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Expiry Date (MM/YY)" required>
+            <input type="text" id="cvv" name="cvv" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="CVV" required>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Donate Now</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

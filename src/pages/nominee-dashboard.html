@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nominee Dashboard | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simulate whether claims exist
+      const claimsExist = checkClaims(); // Function to check if claims exist
+     
+
+      // Get elements
+      const noClaimsSection = document.getElementById('no-claims');
+      const claimsOverviewSection = document.getElementById('claims-overview');
+      const additionalInfoRequestedSection = document.getElementById('additional-info-requested');
+
+      // Show or hide sections based on claim status
+      if (claimsExist) {
+        noClaimsSection.style.display = 'none';
+        claimsOverviewSection.style.display = 'block';
+        // Optionally show the additional info request section based on claim status
+        additionalInfoRequestedSection.style.display = 'block'; // If needed
+      } else {
+        noClaimsSection.style.display = 'block';
+        claimsOverviewSection.style.display = 'none';
+        additionalInfoRequestedSection.style.display = 'none'; // Hidden by default when no claims
+      }
+    });
+
+    // Simulate backend check for claims
+    function checkClaims() {
+      // Simulate fetching claim data from the backend
+      // Return true if claims exist, false if no claims exist
+      // For this example, we'll hard-code the result
+      return true; // Set to true if claims exist
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App - Nominee Dashboard</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="file-claim.html" class="text-gray-700 hover:text-blue-500">File a Claim</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-12">
+
+    <!-- No Claims Section (shown when no claims exist) -->
+    <section id="no-claims" class="flex flex-col items-center justify-center">
+      <div class="bg-white p-12 rounded-lg shadow-lg text-center max-w-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">No Claims Filed Yet</h2>
+        <p class="text-gray-600 mb-8">It looks like you haven't filed any claims yet. When you're ready, you can file a claim for a deceased user.</p>
+        <a href="file-claim.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">File a Claim</a>
+      </div>
+    </section>
+
+    <!-- Claims Overview Section (shown when claims exist) -->
+    <section id="claims-overview" class="mt-12 max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-md" style="display: none;">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Your Claims</h2>
+
+      <!-- Table of Claims -->
+      <table class="min-w-full bg-white border border-gray-200">
+        <thead>
+          <tr>
+            <th class="border-b-2 p-4 text-left text-gray-700">Claim ID</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Deceased Name</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Date Submitted</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Status</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b p-4">12345</td>
+            <td class="border-b p-4">John Doe</td>
+            <td class="border-b p-4">September 10, 2024</td>
+            <td class="border-b p-4 text-yellow-600">Pending Review</td>
+            <td class="border-b p-4">
+              <a href="claim-details.html" class="text-blue-600 hover:text-blue-500">View Details</a>
+            </td>
+          </tr>
+          <!-- Additional rows for other claims -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Additional Information Requested Section (Optional) -->
+    <section id="additional-info-requested" class="mt-12 max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-md" style="display: none;">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Additional Information Requested</h2>
+      <p class="text-gray-600">The admin team has requested further documentation for your claim. Please upload the requested documents below.</p>
+      <a href="upload-documents.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 mt-4 inline-block">Submit Additional Documents</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

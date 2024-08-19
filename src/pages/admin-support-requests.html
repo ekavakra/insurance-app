@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Requests | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App - Admin Support Requests</div>
+    <nav class="space-x-6">
+      <a href="admin-dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="admin-claims.html" class="text-gray-700 hover:text-blue-500">Claims</a>
+      <a href="admin-donation-requests.html" class="text-gray-700 hover:text-blue-500">Donations</a>
+      <a href="admin-user-management.html" class="text-gray-700 hover:text-blue-500">Users</a>
+      <a href="admin-support-requests.html" class="text-blue-600 border-b-2 border-blue-600">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-8">Support Requests Management</h2>
+
+    <!-- Support Requests Table -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Manage Support Requests</h3>
+
+      <!-- Search and Filter Options -->
+      <div class="mb-6">
+        <input type="text" placeholder="Search by request ID or user name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Table of Support Requests -->
+      <table class="min-w-full bg-white border border-gray-200 mb-6">
+        <thead>
+          <tr>
+            <th class="border-b-2 p-4 text-left text-gray-700">Request ID</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">User Name</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Issue</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Date Submitted</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Status</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b p-4">REQ12345</td>
+            <td class="border-b p-4">John Doe</td>
+            <td class="border-b p-4">Unable to update nominee details</td>
+            <td class="border-b p-4">September 10, 2024</td>
+            <td class="border-b p-4 text-yellow-600">Pending</td>
+            <td class="border-b p-4 space-x-2">
+              <a href="admin-support-details.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View</a>
+              <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Mark as Resolved</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="border-b p-4">REQ67890</td>
+            <td class="border-b p-4">Jane Smith</td>
+            <td class="border-b p-4">Payment issue with subscription</td>
+            <td class="border-b p-4">September 8, 2024</td>
+            <td class="border-b p-4 text-green-600">Resolved</td>
+            <td class="border-b p-4">
+              <a href="admin-support-details.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View</a>
+            </td>
+          </tr>
+          <!-- Additional rows for other support requests -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Details | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App - Admin Claims</div>
+    <nav class="space-x-6">
+      <a href="admin-dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="admin-claims.html" class="text-blue-600 border-b-2 border-blue-600">Claims</a>
+      <a href="admin-donation-requests.html" class="text-gray-700 hover:text-blue-500">Donations</a>
+      <a href="admin-user-management.html" class="text-gray-700 hover:text-blue-500">Users</a>
+      <a href="admin-support-requests.html" class="text-gray-700 hover:text-blue-500">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-8">Claim Details and Status</h2>
+
+    <!-- Claims Status Chart -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-12">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Claims Status Overview</h3>
+      <div id="claimsStatusChart" style="height: 300px;"></div>
+    </section>
+
+    <!-- Claims Management Table -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Manage Claims</h3>
+
+      <!-- Table of Claims -->
+      <table class="min-w-full bg-white border border-gray-200 mb-6">
+        <thead>
+          <tr>
+            <th class="border-b-2 p-4 text-left text-gray-700">Claim ID</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Nominee Name</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Deceased Name</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Date Submitted</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Status</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b p-4">12345</td>
+            <td class="border-b p-4">Jane Doe</td>
+            <td class="border-b p-4">John Doe</td>
+            <td class="border-b p-4">September 10, 2024</td>
+            <td class="border-b p-4 text-yellow-600">Pending Review</td>
+            <td class="border-b p-4">
+              <a href="admin-claim-details.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View Details</a>
+            </td>
+          </tr>
+          <!-- Additional rows for other claims -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+  <!-- ECharts Script for Claims Status -->
+  <script>
+    var claimsStatusChart = echarts.init(document.getElementById('claimsStatusChart'));
+    claimsStatusChart.setOption({
+      tooltip: {},
+      title: { text: 'Claims Status Overview', left: 'center' },
+      series: [{
+        name: 'Claims',
+        type: 'pie',
+        radius: '50%',
+        data: [
+          { value: 15, name: 'Pending', itemStyle: { color: '#4299e1' } },
+          { value: 8, name: 'Under Review', itemStyle: { color: '#ecc94b' } },
+          { value: 22, name: 'Approved', itemStyle: { color: '#48bb78' } },
+          { value: 3, name: 'Rejected', itemStyle: { color: '#f56565' } }
+        ],
+        label: {
+          formatter: '{b}: {c}',
+          fontSize: 14,
+          color: '#333'
+        }
+      }]
+    });
+  </script>
+
+</body>
+</html>

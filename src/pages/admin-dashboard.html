@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App - Admin Dashboard</div>
+    <nav class="space-x-6">
+      <a href="admin-dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="admin-claims.html" class="text-gray-700 hover:text-blue-500">Claims</a>
+      <a href="admin-donation-requests.html" class="text-gray-700 hover:text-blue-500">Donations</a>
+      <a href="admin-user-management.html" class="text-gray-700 hover:text-blue-500">Users</a>
+      <a href="admin-support-requests.html" class="text-gray-700 hover:text-blue-500">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-8">Admin Dashboard Overview</h2>
+
+    <!-- Dashboard Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Claims Chart -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Claims Status Overview</h3>
+        <div id="claimsChart" style="height: 300px;"></div>
+        <div class="text-center mt-4">
+          <a href="admin-claims.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View Claims</a>
+        </div>
+      </div>
+
+      <!-- Donations Chart -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Donations Status Overview</h3>
+        <div id="donationsChart" style="height: 300px;"></div>
+        <div class="text-center mt-4">
+          <a href="admin-donation-details.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View Donations</a>
+        </div>
+      </div>
+
+      <!-- Users Chart -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Users Status Overview</h3>
+        <div id="usersChart" style="height: 300px;"></div>
+        <div class="text-center mt-4">
+          <a href="admin-user-management.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Manage Users</a>
+        </div>
+      </div>
+
+      <!-- Support Requests Chart -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Support Requests Overview</h3>
+        <div id="supportChart" style="height: 300px;"></div>
+        <div class="text-center mt-4">
+          <a href="admin-support-requests.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Manage Support</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+  <!-- ECharts Scripts -->
+  <script>
+    // Claims Status Chart
+    var claimsChart = echarts.init(document.getElementById('claimsChart'));
+    claimsChart.setOption({
+      tooltip: {},
+      title: { text: 'Claims Status', left: 'center' },
+      series: [{
+        name: 'Claims',
+        type: 'pie',
+        radius: '50%',
+        data: [
+          { value: 15, name: 'Pending', itemStyle: { color: '#4299e1' } },
+          { value: 8, name: 'Under Review', itemStyle: { color: '#ecc94b' } },
+          { value: 22, name: 'Approved', itemStyle: { color: '#48bb78' } },
+          { value: 3, name: 'Rejected', itemStyle: { color: '#f56565' } }
+        ],
+        label: {
+          formatter: '{b}: {c}',
+          fontSize: 14,
+          color: '#333'
+        }
+      }]
+    });
+
+    // Donations Progress Chart
+    var donationsChart = echarts.init(document.getElementById('donationsChart'));
+    donationsChart.setOption({
+      tooltip: {},
+      title: { text: 'Donations Progress', left: 'center' },
+      xAxis: {
+        type: 'category',
+        data: ['Request A', 'Request B']
+      },
+      yAxis: { type: 'value' },
+      series: [{
+        type: 'bar',
+        data: [7500, 6000],
+        label: {
+          show: true,
+          position: 'top',
+          formatter: '${c}',
+          fontSize: 14,
+          color: '#333'
+        },
+        itemStyle: {
+          color: function (params) {
+            var colors = ['#48bb78', '#4299e1'];
+            return colors[params.dataIndex];
+          }
+        }
+      }]
+    });
+
+    // Users Status Chart
+    var usersChart = echarts.init(document.getElementById('usersChart'));
+    usersChart.setOption({
+      tooltip: {},
+      title: { text: 'Users Status', left: 'center' },
+      xAxis: {
+        type: 'category',
+        data: ['Active', 'Inactive', 'Deactivated']
+      },
+      yAxis: { type: 'value' },
+      series: [{
+        type: 'bar',
+        data: [100, 25, 5],
+        label: {
+          show: true,
+          position: 'top',
+          formatter: '{c}',
+          fontSize: 14,
+          color: '#333'
+        },
+        itemStyle: {
+          color: function (params) {
+            var colors = ['#48bb78', '#a0aec0', '#f56565'];
+            return colors[params.dataIndex];
+          }
+        }
+      }]
+    });
+
+    // Support Requests Chart
+    var supportChart = echarts.init(document.getElementById('supportChart'));
+    supportChart.setOption({
+      tooltip: {},
+      title: { text: 'Support Requests', left: 'center' },
+      xAxis: {
+        type: 'category',
+        data: ['Unresolved', 'Resolved']
+      },
+      yAxis: { type: 'value' },
+      series: [{
+        type: 'bar',
+        data: [8, 12],
+        label: {
+          show: true,
+          position: 'top',
+          formatter: '{c}',
+          fontSize: 14,
+          color: '#333'
+        },
+        itemStyle: {
+          color: function (params) {
+            var colors = ['#f56565', '#48bb78'];
+            return colors[params.dataIndex];
+          }
+        }
+      }]
+    });
+  </script>
+
+</body>
+</html>

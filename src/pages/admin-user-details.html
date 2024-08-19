@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App - Admin User Details</div>
+    <nav class="space-x-6">
+      <a href="admin-dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="admin-claims.html" class="text-gray-700 hover:text-blue-500">Claims</a>
+      <a href="admin-donation-requests.html" class="text-gray-700 hover:text-blue-500">Donations</a>
+      <a href="admin-user-management.html" class="text-blue-600 border-b-2 border-blue-600">Users</a>
+      <a href="admin-support-requests.html" class="text-gray-700 hover:text-blue-500">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-8">User Details</h2>
+
+    <!-- User Information -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-12">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">User Information</h3>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-gray-700 font-semibold">User Name:</p>
+          <p class="text-gray-800">John Doe</p>
+        </div>
+
+        <div>
+          <p class="text-gray-700 font-semibold">Email:</p>
+          <p class="text-gray-800">john.doe@example.com</p>
+        </div>
+
+        <div>
+          <p class="text-gray-700 font-semibold">Account Status:</p>
+          <p class="text-green-600 font-semibold">Active</p>
+        </div>
+
+        <div>
+          <p class="text-gray-700 font-semibold">Date Registered:</p>
+          <p class="text-gray-800">March 5, 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation and Claims Summary -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-12">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">Donation and Claims Summary</h3>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-gray-700 font-semibold">Total Donations Made:</p>
+          <p class="text-gray-800">$1,200</p>
+        </div>
+
+        <div>
+          <p class="text-gray-700 font-semibold">Total Claims Filed:</p>
+          <p class="text-gray-800">2</p>
+        </div>
+
+        <div>
+          <p class="text-gray-700 font-semibold">Requested vs Donated (%):</p>
+          <p class="text-gray-800">80%</p>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-300 my-4"></div>
+
+      <div class="space-y-4">
+        <button class="bg-yellow-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-700">Deactivate User</button>
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Send Notification</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

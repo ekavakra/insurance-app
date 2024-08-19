@@ -1,0 +1,19 @@
+{
+  "name": "insurance-web-app",
+  "version": "1.0.0",
+  "description": "A web app for insurance management",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/css/output.css --watch",
+    "dev": "live-server src/pages"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.0.0",
+    "live-server": "^1.2.1"
+  }
+}
+

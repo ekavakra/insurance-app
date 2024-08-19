@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Details | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App - Admin Donation Requests</div>
+    <nav class="space-x-6">
+      <a href="admin-dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="admin-claims.html" class="text-gray-700 hover:text-blue-500">Claims</a>
+      <a href="admin-donation-requests.html" class="text-blue-600 border-b-2 border-blue-600">Donations</a>
+      <a href="admin-user-management.html" class="text-gray-700 hover:text-blue-500">Users</a>
+      <a href="admin-support-requests.html" class="text-gray-700 hover:text-blue-500">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-8">Donation Request Details</h2>
+
+    <!-- Donation Progress Chart -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-12">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Donation Progress</h3>
+      <div id="donationProgressChart" style="height: 300px;"></div>
+    </section>
+
+    <!-- Donation Management Table -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Manage Donations</h3>
+
+      <!-- Table of Donations -->
+      <table class="min-w-full bg-white border border-gray-200 mb-6">
+        <thead>
+          <tr>
+            <th class="border-b-2 p-4 text-left text-gray-700">Beneficiary Name</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Amount</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Date</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Status</th>
+            <th class="border-b-2 p-4 text-left text-gray-700">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b p-4">John Doe</td>
+            <td class="border-b p-4">$500</td>
+            <td class="border-b p-4">September 10, 2024</td>
+            <td class="border-b p-4 text-green-600">Completed</td>
+            <td class="border-b p-4">
+              <a href="admin-donation-details.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View</a>
+            </td>
+          </tr>
+          <!-- Additional rows for other donors -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+  <!-- ECharts Script for Donation Progress -->
+  <script>
+    var donationProgressChart = echarts.init(document.getElementById('donationProgressChart'));
+    donationProgressChart.setOption({
+      tooltip: {},
+      title: { text: 'Donation Progress', left: 'center' },
+      xAxis: {
+        type: 'category',
+        data: ['Request A', 'Request B']
+      },
+      yAxis: { type: 'value' },
+      series: [{
+        type: 'bar',
+        data: [7500, 6000],
+        label: {
+          show: true,
+          position: 'top',
+          formatter: '${c}',
+          fontSize: 14,
+          color: '#333'
+        },
+        itemStyle: {
+          color: function (params) {
+            var colors = ['#48bb78', '#4299e1'];
+            return colors[params.dataIndex];
+          }
+        }
+      }]
+    });
+  </script>
+
+</body>
+</html>

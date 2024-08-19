@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="activity.html" class="text-blue-600 border-b-2 border-blue-600">Activity</a>
+      <a href="profile.html" class="text-gray-700 hover:text-blue-500">Profile</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-12">
+    <h1 class="text-4xl font-bold text-gray-800 text-center mb-8">Your Recent Activity</h1>
+
+    <!-- Activity List -->
+    <section class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-8">
+      
+      <!-- Recent Activity Table -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Activity Log</h2>
+        <table class="w-full text-left table-auto">
+          <thead>
+            <tr>
+              <th class="border-b-2 border-gray-300 p-4">Date</th>
+              <th class="border-b-2 border-gray-300 p-4">Action</th>
+              <th class="border-b-2 border-gray-300 p-4">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border-b border-gray-300 p-4">September 12, 2024</td>
+              <td class="border-b border-gray-300 p-4">Support Request Submitted</td>
+              <td class="border-b border-gray-300 p-4">Requested financial assistance for John Doe</td>
+            </tr>
+            <tr>
+              <td class="border-b border-gray-300 p-4">August 15, 2024</td>
+              <td class="border-b border-gray-300 p-4">Nominee Added</td>
+              <td class="border-b border-gray-300 p-4">Added Jane Doe as a nominee</td>
+            </tr>
+            <tr>
+              <td class="border-b border-gray-300 p-4">August 1, 2024</td>
+              <td class="border-b border-gray-300 p-4">Subscription Payment</td>
+              <td class="border-b border-gray-300 p-4">Paid $49.99 for Premium Plan</td>
+            </tr>
+            <tr>
+              <td class="border-b border-gray-300 p-4">July 10, 2024</td>
+              <td class="border-b border-gray-300 p-4">Support Request Closed</td>
+              <td class="border-b border-gray-300 p-4">Financial support request for John Doe was approved</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

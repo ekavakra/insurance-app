@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="dashboard.html" class="text-blue-600 border-b-2 border-blue-600">Dashboard</a>
+      <a href="profile.html" class="text-gray-700 hover:text-blue-500">Profile</a>
+      <a href="support.html" class="text-gray-700 hover:text-blue-500">Support</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-12">
+    <h1 class="text-4xl font-bold text-gray-800 text-center mb-8">Welcome to Your Dashboard</h1>
+
+    <!-- Account Overview -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Account Details -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Account Overview</h2>
+        <p class="text-gray-600 mb-4">Account Status: <span class="font-semibold text-green-600">Active</span></p>
+        <p class="text-gray-600 mb-4">Subscription: <span class="font-semibold">Premium Plan</span></p>
+        <p class="text-gray-600 mb-4">Next Billing Date: <span class="font-semibold">September 10, 2024</span></p>
+        <a href="billing.html" class="text-blue-600 hover:text-blue-500">Manage Subscription</a>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Recent Activity</h2>
+        <ul class="space-y-2">
+          <li class="text-gray-600">Donation received for your nominee <span class="font-semibold">John Doe</span></li>
+          <li class="text-gray-600">Payment successfully processed for your subscription</li>
+          <li class="text-gray-600">New support request submitted</li>
+        </ul>
+        <a href="activity.html" class="text-blue-600 hover:text-blue-500 mt-4 block">View All Activity</a>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Quick Actions</h2>
+        <div class="space-y-4">
+          <a href="manage-nominee.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg block text-center hover:bg-blue-700">Manage Nominee</a>
+          <a href="support.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg block text-center hover:bg-blue-700">Request Support</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Active Donation Requests</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Example Claim Request -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">John Doe's Nominee</h3>
+          <p class="text-gray-600 mb-4">Nominee needs assistance after John Doe's passing.</p>
+          <p class="text-gray-600 mb-4">Amount Needed: <span class="font-semibold">$10,000</span></p>
+          <p class="text-gray-600 mb-4">Raised: <span class="font-semibold">$3,000</span></p>
+          <a href="donate.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg block text-center hover:bg-blue-700">Donate Now</a>
+        </div>
+
+        <!-- More claims can be added here similarly -->
+        <!-- Claim 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Jane Doe's Nominee</h3>
+          <p class="text-gray-600 mb-4">Nominee needs financial support after the loss of Jane Doe.</p>
+          <p class="text-gray-600 mb-4">Amount Needed: <span class="font-semibold">$8,500</span></p>
+          <p class="text-gray-600 mb-4">Raised: <span class="font-semibold">$5,000</span></p>
+          <a href="donate.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg block text-center hover:bg-blue-700">Donate Now</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing | Insurance Web App</title>
+  <link rel="stylesheet" href="../../dist/css/output.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white shadow-md">
+    <div class="text-xl font-bold">Insurance App</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="dashboard.html" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+      <a href="billing.html" class="text-blue-600 border-b-2 border-blue-600">Billing</a>
+      <a href="profile.html" class="text-gray-700 hover:text-blue-500">Profile</a>
+      <a href="logout.html" class="text-red-600 border border-red-600 px-4 py-2 rounded-lg">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-12">
+    <h1 class="text-4xl font-bold text-gray-800 text-center mb-8">Billing & Subscription</h1>
+
+    <!-- Billing Overview -->
+    <section class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-8">
+      
+      <!-- Subscription Plan -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Your Subscription Plan</h2>
+        <p class="text-gray-600 mb-4">Current Plan: <span class="font-semibold">Premium Plan</span></p>
+        <p class="text-gray-600">Next Billing Date: <span class="font-semibold">September 10, 2024</span></p>
+        <a href="#" class="text-blue-600 hover:text-blue-500 mt-4 block">Change Plan</a>
+      </div>
+
+      <!-- Payment Method -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Payment Method</h2>
+        <p class="text-gray-600 mb-4">Card Ending: <span class="font-semibold">**** 1234</span></p>
+        <p class="text-gray-600">Expiration Date: <span class="font-semibold">12/24</span></p>
+        <a href="#" class="text-blue-600 hover:text-blue-500 mt-4 block">Update Payment Method</a>
+      </div>
+
+      <!-- Billing History -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Billing History</h2>
+        <table class="w-full text-left table-auto">
+          <thead>
+            <tr>
+              <th class="border-b-2 border-gray-300 p-4">Date</th>
+              <th class="border-b-2 border-gray-300 p-4">Description</th>
+              <th class="border-b-2 border-gray-300 p-4">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border-b border-gray-300 p-4">August 10, 2024</td>
+              <td class="border-b border-gray-300 p-4">Premium Subscription</td>
+              <td class="border-b border-gray-300 p-4">$49.99</td>
+            </tr>
+            <tr>
+              <td class="border-b border-gray-300 p-4">July 10, 2024</td>
+              <td class="border-b border-gray-300 p-4">Premium Subscription</td>
+              <td class="border-b border-gray-300 p-4">$49.99</td>
+            </tr>
+            <tr>
+              <td class="border-b border-gray-300 p-4">June 10, 2024</td>
+              <td class="border-b border-gray-300 p-4">Premium Subscription</td>
+              <td class="border-b border-gray-300 p-4">$49.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 p-6 text-center mt-auto">
+    <p class="text-gray-600">© 2024 Insurance Web App. All rights reserved.</p>
+    <div class="space-x-4">
+      <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-500">Privacy Policy</a>
+      <a href="contact.html" class="text-gray-600 hover:text-blue-500">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
