@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation Confirmation | Insurance Web App</title>
   <link rel="stylesheet" href="../../dist/css/output.css">
+  <script>
+    // Redirect to dashboard after 5 seconds
+    setTimeout(function() {
+      window.location.href = "dashboard.html";
+    }, 5000);
+  </script>
 </head>
 <body class="bg-gradient-to-b from-blue-50 to-white flex flex-col min-h-screen">
 
@@ -23,7 +29,7 @@
   <!-- Main Content -->
   <main class="flex-grow p-12 flex items-center justify-center">
     <div class="bg-white p-12 rounded-lg shadow-lg text-center">
-      <h1 class="text-4xl font-bold text-gray-800 mb-6">Thank You for Your Donation!</h1>
+      <h1 class="text-4xl font-bold text-gray-800 mb-6">Thank You For Your Donation!</h1>
       <p class="text-gray-600 mb-8">Your generous donation of <span class="font-semibold">$50</span> has been successfully processed.</p>
       <p class="text-gray-600 mb-8">Your support helps us provide financial assistance to those in need during difficult times.</p>
       <a href="dashboard.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Return to Dashboard</a>

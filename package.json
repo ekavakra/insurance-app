@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/css/output.css --watch",
+    "build": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/css/output.css",
     "dev": "live-server src/pages"
   },
   "keywords": [],
